@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36fdf43c-8649-49a2-bd44-98a7f130079e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KwanzarApp/SystemApp/POS.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/KwanzarApp/SystemApp/POS.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProSmart.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_app/Config/DBKwanzar.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/DBKwanzar.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_app/Config/POS.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/POS.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_app/Config/Saft.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/Saft.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_disk/System/POS/editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/System/POS/editar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_disk/js/WhiteLabel.v.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/js/WhiteLabel.v.2.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\wamp64\bin\php\php5.6.40\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/league/csv" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/messagebird/php-rest-api" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/src" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2XdiioFgtJdjMrcrxGDKqXqMRKh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/ProSmart&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Product.class.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/_app/Config/Product.class.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36fdf43c-8649-49a2-bd44-98a7f130079e" name="Changes" comment="" />
+      <created>1698965489923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698965489923</updated>
+      <workItem from="1698965489954" duration="1410000" />
+      <workItem from="1699260691281" duration="579000" />
+      <workItem from="1701384480327" duration="12227000" />
+      <workItem from="1701532008478" duration="3394000" />
+      <workItem from="1701610230340" duration="15864000" />
+      <workItem from="1701730383762" duration="3919000" />
+      <workItem from="1701735713948" duration="12495000" />
+      <workItem from="1701823411584" duration="7000" />
+      <workItem from="1701865404219" duration="10793000" />
+      <workItem from="1701989547102" duration="21030000" />
+      <workItem from="1702161349995" duration="12041000" />
+      <workItem from="1702224698675" duration="15850000" />
+      <workItem from="1702419131191" duration="506000" />
+      <workItem from="1702425532290" duration="297000" />
+      <workItem from="1702427021745" duration="601000" />
+      <workItem from="1702682017172" duration="6620000" />
+      <workItem from="1703034198770" duration="343000" />
+      <workItem from="1703206572560" duration="3039000" />
+      <workItem from="1703335660497" duration="242000" />
+      <workItem from="1703348005178" duration="7569000" />
+      <workItem from="1703481327153" duration="10000" />
+      <workItem from="1703596841057" duration="382000" />
+      <workItem from="1704341213147" duration="2833000" />
+      <workItem from="1704413772916" duration="7438000" />
+      <workItem from="1704508013591" duration="2635000" />
+      <workItem from="1704558966603" duration="1078000" />
+      <workItem from="1704988502738" duration="15409000" />
+      <workItem from="1705270425242" duration="548000" />
+      <workItem from="1705705012651" duration="10022000" />
+      <workItem from="1705766289752" duration="8582000" />
+      <workItem from="1706205473661" duration="4655000" />
+      <workItem from="1706226110488" duration="3238000" />
+      <workItem from="1706544392722" duration="963000" />
+      <workItem from="1706888930763" duration="1214000" />
+      <workItem from="1708080674342" duration="22656000" />
+      <workItem from="1708171584125" duration="9833000" />
+      <workItem from="1708609525479" duration="13000" />
+      <workItem from="1708909742621" duration="267000" />
+      <workItem from="1708985270406" duration="13000" />
+      <workItem from="1709250774106" duration="1322000" />
+      <workItem from="1709549735534" duration="22142000" />
+      <workItem from="1709589156560" duration="1890000" />
+      <workItem from="1709854499024" duration="6836000" />
+      <workItem from="1709937639085" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

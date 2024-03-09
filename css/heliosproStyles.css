@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.logotypes{
+    width: 120px;
+    height: 80px;
+}
+
+.carregar-logotype{
+    width: 120px;
+    height: 80px;
+    background: url('../uploads/default.jpg') center 50%  no-repeat;
+    box-shadow: 0 0 2px rgba(222, 222, 222, 0.6);
+    border-radius: 4px;
+}
+
+#styles,
+.styles{
+    width: 100%;
+    margin: 5px auto;
+    display: block;
+}
+
+/*** 19.07.2020 ***/
+.brand-logotype{
+    width: 180px!important;
+    height: 60px!important;
+}
+
+.padding_layout_1{
+    width: 80%!important;
+    margin: 20px auto!important;
+}
+
+.text_align_center,
+.center,
+.margin_bottom_30_all,
+.padding_layout_1{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}

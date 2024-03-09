@@ -1,0 +1,42 @@
+.iLoveYou,
+#iLoveYou{
+    max-height: 300px!important;
+    overflow: auto!important;
+    z-index: 999!important;
+}
+
+.success{
+    color: #08ce36 !important;
+}
+
+.warning{
+    color: orange!important;
+}
+
+.danger{
+    color: red!important;
+}
+
+.yellon{
+    color: #a1a100 !important;
+}
+
+.porn,
+.jud{
+    font-size: 9pt!important;
+}
+
+.porn{
+    text-align: center;
+}
+
+.GotMe{
+    width: auto;
+    margin: 75px auto!important;
+    padding-left: 45px!important;
+}
+
+.smile{
+    margin-left: 62px!important;
+    margin-top: 10px!important;
+}

@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+/*** RH ***/
+#formulario{
+    width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+}
+
+#formulario #getResult{
+    width: 80%;
+    margin: 0 10%;
+    transition: 0.6s ease-in;
+}
+
+#formulario fieldset{
+    background: white;
+    border: 0 none;
+    position: absolute;
+    box-shadow: 0 0 15px 1px rgba(92, 92, 92, 0.76);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+}
+
+#formulario a,
+#formulario input,
+#formulario textarea,
+#formulario select,
+#formulario button{
+    padding: 12px;
+    border: 1px solid rgba(165, 165, 164, 0.43);
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    color: #000000;
+    font: 12px "Trebuchet MS", Tahoma, Arial, sans-sarif;
+    margin-bottom: 5px;
+}
+
+#formulario span{
+    float: left!important;
+    text-align: left!important;
+    font-size: 7pt;
+    margin: 0 auto;
+}
+
+#formulario .acao{
+    width: 100px;
+    background: rgba(38, 128, 1010, 0.9);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-weight: bold;
+    padding: 6px 0;
+    float: left;
+    margin-right: 5px;
+}
+
+#formulario .acao:hover{
+    text-decoration: none!important;
+    background: rgba(31, 116, 219, 0.73);
+    cursor: pointer;
+}
+
+#formulario h2,
+#formulario h3{
+    font: 22px "Trebuchet MS", Tahoma, Arial, Sans-sarif;
+    color: #000000;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+#formulario h3{
+    color: #333;
+    font-size: 17px;
+}
+
+#formulario fieldset:not(:first-of-type){
+    display: none;
+}
+
+@media only screen and (max-width: 712px){
+    #formulario{
+        width: 90%!important;
+    }
+}
+
+#formulario #progress{
+    overflow: hidden;
+    counter-reset: step;
+    width: 55%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#formulario #progress li{
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 33.33%;
+    position: relative;
+}
+
+#formulario #progress li:nth-child(1){
+    margin-top: 2px!important;
+}
+
+#formulario #progress li:before{
+    list-style-type: none;
+    content: Counter(step);
+    content-increment: step;
+    width: 20px;
+    display: block;
+    line-height: 20px;
+    background: white;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+}
+
+#formulario #progress li:after{
+    content:  '';
+    width: 100px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: -50%;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 531px){
+    #formulario #progress li:after{
+        width: 90%!important;
+    }
+}
+
+#formulario #progress li:first-child:after{
+    content: none;
+}
+
+#formulario #progress li.ativo:before,
+#formulario #progress li.ativo:after,
+#formulario #progress li:nth-child(1):before{
+    background: rgba(40, 208, 141, 0.9);
+    color: rgba(40, 208, 141, 0.9);
+    text-shadow: 0 1px 0;
+}
+
+#Amar{
+    padding: 10px;
+    text-align: center;
+}
+
+#Amar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+#Amar ul li a,
+#Amar ul li{
+    float: left;
+    width: 150px;
+    height: 65px;
+    line-height: 65px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(0,0,0,.7);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+ul.drop-menu li a:hover,
+#Amar ul li:hover{
+    background: #d5d5d5;
+    border-radius: 5px;
+}
+
+ul.drop-menu{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+    transition: .4s;
+}
+
+/**
+ul.drop-menu li a,
+ul.drop-menu li{
+    background: rgba(158, 158, 158, 0.87);
+    color: rgba(255,255,255,0.7);
+    transition: .4s;
+    text-decoration: none;
+}
+
+ul.drop-menu li a:hover,
+ul.drop-menu li:hover{
+    background: #606060;
+}**/
+
+ul.drop-menu li a:last-child,
+ul.drop-menu li:last-child{
+    border-radius: 0px 0px 0px 0px;
+}
+
+ul.drop-menu li{display: none}
+
+#Amar ul li:hover > ul.drop-menu li a,
+#Amar ul li:hover > ul.drop-menu li{
+    transition: .4s;
+    display: block;
+}
+
+/*** Welcome ***/
+.welcome{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.welcome .abc{
+    width: 100%!important;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.welcome .abc img{
+    width: 180px;
+    height: 80px;
+}
+
+.welcome .efg{
+    width: 100%;
+    margin: 10px 0!important;
+    padding: 0;
+}
+
+.welcome .efg p{
+    margin: 0;
+}
+
+.welcome ul{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.welcome ul li{
+    width: 198px;
+    height: 300px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 0 2px rgba(160, 157, 161, 0.39);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.welcome ul li .md{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.welcome .md h2,
+.welcome .md p{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome ul li span{
+    margin: 0 auto!important;
+    align-content: center;
+    align-items: center;
+}
+
+.welcome ul li span i{
+    width: 100%;
+    height: 100%;
+}
+
+/*** Chats ***/
+
+.header-window{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between!important;
+    align-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background: #007cff;
+    color: white;
+}
+
+.header-window p{
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 0!important;
+}
+
+.header-window .close{
+    font-size: 12pt;
+    font-weight: normal;
+    margin: 0!important;
+}
+
+.body{
+    float: left;
+    width: 100%!important;
+}
+
+.sms,
+.mensagens{
+    width: 100%;
+    background: rgba(235, 235, 235, 0.22);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mensagens{
+    height: 200px!important;
+    max-height: 200px!important;
+}
+
+.sms ul,
+.mensagens ul{
+    list-style: none;
+    width: 100%!important;
+    padding: 0!important;
+    position: relative!important;
+}
+.sms ul li,
+.mensagens ul li{
+    float: right;
+    width: 90%!important;
+    right: 2%!important;
+    background: rgba(12, 155, 255, 0.85);
+    border: 1px solid transparent!important;
+    border-radius: 2px!important;
+    color: #ffffff!important;
+    padding: 10px;
+    margin-bottom: 3px;
+    position: relative!important;
+}
+
+.sms ul li,
+.mensagens ul li{
+    font: 13px tahoma, arial;
+    color: #666;
+}
+.sms ul li .imgSmall,
+.mensagens ul li .imgSmall{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.sms ul li.eu,
+.mensagens ul li.eu{
+    float: left;
+    left: 5%!important;
+    background: rgba(185, 195, 198, 0.82);
+    border: 1px solid transparent!important;
+    color: #0f0f0f !important;
+}
+
+.send_message{
+    float: left;
+    width: 100%!important;
+    position: relative;
+}
+
+.send_message input{
+    float: left;
+    width: 100%!important;
+    border: 1px solid transparent!important;
+    padding: 5px!important;
+    border-top: 1px solid rgba(185, 195, 198, 0.82)!important;
+}
+
+.imgSmall{
+    float: left;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.imgSmall img{
+    width: 100%;
+    height: 100%;
+}
+
+.status{
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%!important;
+    background: #666!important;
+    margin-left: 10px!important;
+}
+
+.on{
+    background: #39e83c!important;
+}
+
+.off{
+    background: #ccc!important;
+}
+
+/*** 09.08.2020 ***/
+
+#bate-papo{
+    width: 60%!important;
+    height: 500px!important;
+    max-height: 500px!important;
+    padding: 0!important;
+    margin: 5px auto!important;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+
+    background: transparent;
+    box-shadow: 0 2px 4px 0 rgba(140, 140, 140, 0.2);
+}
+
+#chats{
+    width: 200px!important;
+    height: 100%!important;
+    background: white;
+    position: relative!important;
+    border-right: 1px solid rgba(140, 140, 140, 0.11);
+}
+
+.mms{
+    width: 100%;
+    padding: 10px!important;
+}
+
+#ChatsMsg a{
+    list-style: none;
+    text-decoration: none;
+}
+
+#ChatsMsg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    height: 68%!important;
+    border-top: 1px solid #eeeeee;
+    margin: 10px 0!important;
+    overflow-y: auto!important;
+}
+
+#ChatsMsg div.ppp a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#ChatsMsg div.ppp{
+    width: 100%!important;
+    padding: 5px!important;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#ChatsMsg div.ppp img.mel{
+    width: 50px!important;
+    height: 50px!important;
+    border-radius: 50%!important;
+    margin-right: 10px!important;
+}
+
+.pppHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pppHeader h2 {
+    color: #161616;
+    font-weight: bold;
+    font-size: 10pt!important;
+    margin: 0!important;
+}
+
+.pppHeader span{
+    color: #161616;
+    font-size: 9pt!important;
+}
+
+.pppHeader span img{
+    width: 14px!important;
+    height: 14px!important;
+}
+
+.pppHeader span.hr{
+    font-size: 7pt!important;
+}
+
+.bate-papo-body{
+    width: 68%!important;
+    height: 100%!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.papo-body{
+    width: 100%!important;
+    height: 100%!important;
+    padding: 0!important;
+    margin: 0!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sms{
+    width: 100%!important;
+    height: 93%!important;
+    border-left: 1px solid rgba(185, 195, 198, 0.82)!important;
+}
+
+.send_message_one input{
+    border: none!important;
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+    height: 34px!important;
+    padding: 10px;
+    text-align: left!important;
+    border-top: 1px solid rgba(185, 195, 198, 0.82)!important;
+    border-left: 1px solid rgba(185, 195, 198, 0.82)!important;
+}

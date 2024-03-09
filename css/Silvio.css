@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial;
+}
+
+#Silvio{
+    max-width: 100%;
+    height: 1039px!important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.img-silvio{
+    width: auto;
+    max-width: 180px!important;
+    height: auto;
+    max-height: 180px!important;
+    margin-bottom: 5px!important;
+}
+
+.header-silvio{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.header-silvio-a{
+    width: 45%!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-silvio-a h2{
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px!important;
+    margin-bottom: 5px!important;
+    padding: 0;
+}
+
+.header-silvio span,
+.header-silvio p{
+    margin: 0;
+    margin-bottom: 1px!important;
+    font-size: 8pt!important;
+}
+
+.website{
+    margin-bottom: 5px!important;
+    color: #000;
+}
+
+.website span{
+    color: #000000!important;
+}
+
+.header-silvio-a span{
+    font-weight: bold;
+}
+
+.header-silvio-b{
+    width: 35%!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header-silvio-b h4{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px!important;
+    font-size: 8pt!important;
+    font-weight: bold;
+}
+
+.header-silvio-b span:nth-last-child(1){
+    margin-top: 10px!important;
+}
+
+.limpopo-silvio{
+    width: 100%;
+    height: auto;
+    padding: 5px 35px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+    border-bottom: 3px solid #000!important;
+}
+
+.limpopo-silvio-2{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+    border-bottom: 2px solid #000!important;
+}
+
+.limpopo-silvio h1{
+    margin: 0;
+    padding: 0;
+    font-size: 10pt!important;
+}
+
+.limpopo-silvio-2 p{
+    width: 50%!important;
+    font-size: 6pt!important;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    right: 0!important;
+}
+
+.limpopo-silvio-2 span p{
+    width: 100%!important;
+}
+
+.limpopo-silvio span{
+    font-size: 9pt!important;
+    margin: 0;
+    padding: 0;
+}
+
+.limpopo-silvio-2 span,
+.limpopo-silvio-2 label{
+    font-size: 6pt!important;
+    width: 50%!important;
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    width: 100%;
+    padding: 0;
+    margin: 6px 0!important;
+    font-weight: normal!important;
+}
+
+table tr th{
+    margin: 0 5%!important;
+    text-align: left!important;
+    border-bottom: 1px solid black!important;
+}
+
+table tr th{
+    text-transform: capitalize!important;
+    padding: 0!important;
+}
+
+table,
+thead,
+tbody,
+tfoot{
+    width: 100%!important;
+}
+
+table{
+    text-transform: capitalize!important;
+    font-size: 8pt!important;
+}
+
+table tbody tr td:nth-last-child(1){
+    text-align: right!important;
+}
+
+table tbody tr td.pp{
+    text-align: left!important;
+}
+
+
+.table-silvio{
+    width: 100%!important;
+    height: 520px;
+    box-sizing: border-box!important;
+}
+
+.table-silvio_n{
+    width: 100%!important;
+    height: 470px;
+    box-sizing: border-box!important;
+}
+
+.table-silvio-c{
+    width: 100%!important;
+    height: 500px;
+    box-sizing: border-box!important;
+}
+
+.table-silvio-b{
+    width: 100%!important;
+    height: 500px;
+    box-sizing: border-box!important;
+}
+
+.punheta th{
+    border-bottom: 2px solid black!important;
+}
+
+.cripton-silvio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.cripton-silvio-a{
+    width: 60%!important;
+}
+
+.cripton-silvio-a h2{
+    font-size: 9pt!important;
+    margin: 0;
+    margin-top: 20px!important;
+    padding: 0;
+    font-weight: bold;
+}
+
+.titleOne{
+    font-size: 10pt!important;
+    font-weight: bold;
+    margin-top: 2px!important;
+    margin-bottom: 5px!important;
+    padding: 0;
+}
+
+.ap{
+    margin-top: 5px!important;
+}
+
+.Uno{
+    width: 100%;
+    font-size: 7pt!important;
+    margin: 0;
+    margin-bottom: 1px!important;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.Uno span,
+.Uno p{
+    margin: 0;
+    padding: 0;
+}
+
+.Uno span{
+    font-weight: bold!important;
+}
+
+.cripton-silvio-b{
+    width: 30%!important;
+    margin-left: 2%!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.spec tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000!important;
+    font-size: 8pt!important;
+    padding: 3px 0!important;
+    border-bottom: 1px solid #626161;
+}
+
+.spec tr td:nth-child(1){
+    font-weight: bold!important;
+}
+
+.spec tr:nth-last-child(1){
+    border-bottom: none;
+}
+
+.total-silvio{
+    width: 100%;
+    margin: 5px 0!important;
+    border-top: 2px solid #000000!important;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: flex-start;
+    align-content: flex-start;
+}
+
+.total-silvio p{
+    font-weight: bold!important;
+    font-size: 10pt!important;
+    margin: 0!important;
+    margin-top: 3px!important;
+    padding: 0!important;
+}
+.nota-silvio{
+    width: 80%;
+    margin: 5px auto!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.nota-silvio p{
+    text-align: center!important;
+    font-size: 8pt!important;
+}
+
+.silvio-400{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin: 0!important;
+}
+
+.img-400{
+    max-width: 14%!important;
+    max-height: 30px!important;
+    margin: 0!important;
+    margin-left: 1%!important;
+    margin-right: 1%!important;
+}

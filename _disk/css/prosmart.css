@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.btn-whatsapp{
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    background-color: #eeeeee;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.64);
+    color: #25D366;
+    position: fixed!important;
+    right: 3%!important;
+    bottom: 5%!important;
+    border-radius: 4px!important;
+    padding: 5px;
+    transition: all .4s ease-in;
+}
+
+.btn-whatsapp:hover{
+    color: #128C7E;
+}
+
+.btn-whatsapp span{
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.btn-whatsapp svg{
+    width: 100%!important;
+    height: 100%!important;
+}

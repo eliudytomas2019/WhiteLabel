@@ -1,0 +1,792 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background: rgba(238, 238, 238, 0.52);
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif!important;
+}
+
+ul,
+li,
+ol{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #3385ff;
+    font-size: 10pt!important;
+}
+
+#menu{
+    width: 100%!important;
+    height: auto;
+    padding: 0 10px!important;
+    background: white;
+    box-shadow: 0 0 2px rgba(128, 128, 128, 0.33);
+    z-index: 999;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menu .logotype{
+    width: 160px!important;
+    height: 60px!important;
+    margin-left: 20px!important;
+}
+
+
+#menu ul,
+#menu ul li#nzambi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0 10px!important;
+}
+
+#menu ul li,
+#menu ul li#nzambi{
+    margin: 0 5px!important;
+    position: relative;
+}
+
+#menu ul li#nzambi{
+    padding: 0 15px!important;
+    border-left: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+#menu ul li .icon-users{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px!important;
+}
+
+#menu ul li span,
+#menu ul li h6{
+    font-size: 9pt!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+#menu ul li span{
+    font-size: 8pt!important;
+}
+
+.drop-down{
+    width: 100%!important;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 2px rgba(178, 178, 178, 0.34);
+    top: 3%!important;
+    margin-top: 30px!important;
+    padding: 0!important;
+    display: none;
+}
+
+.drop-down li{
+    padding: 1px 2px;
+}
+
+.drop-down li:nth-last-child(1){
+    border-top: 1px solid #dddddd;
+}
+
+#menu ul li:hover .drop-down{
+    display: block!important;
+}
+
+.drop-down li a,
+#menu a{
+    color: black!important;
+}
+
+.drop-down li a{
+    font-size: 9pt!important;
+}
+
+.mesa_product,
+.n2options,
+.MyLife,
+.lifeIs,
+.exteira,
+.exteira_mesas,
+.exteira_mesas ul li a{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.exteira{
+    flex-direction: row;
+}
+
+.exteira{
+    margin: 20px auto!important;
+    height: 500px!important;
+    width: 80%!important;
+    box-shadow: 0 0 2px rgba(0,0,0,0.56);
+}
+
+.exteira_mesas{
+    flex-direction: column!important;
+    width: 80%!important;
+    height: 100%!important;
+    max-height: 100%!important;
+    overflow-y: auto!important;
+    position: relative!important;
+}
+
+.exteira_mesas #menu_mesa{
+    width: 100%;
+    height: 10%!important;
+    margin-bottom: 5%!important;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#menu_mesa{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+#menu_mesa a{
+    margin: 0 5px!important;
+}
+
+.exteira_presenca,
+.exteira_mesas #menu_mesa{
+    background: white;
+}
+
+.exteira_mesas ul{
+    position: relative;
+    height: 85%!important;
+    width: 100%!important;
+    padding: 10px!important;
+}
+
+.exteira_mesas ul li{
+    display: inline-block!important;
+    width: 120px!important;
+    height: 80px!important;
+    margin: 5px 2px!important;
+    background: white;
+    box-shadow: 0 0 2px rgba(157, 159, 159, 0.22);
+    border-radius: 2px!important;
+}
+
+.exteira_mesas ul li a{
+    flex-direction: column!important;
+    justify-content: space-between!important;
+    height: 100%!important;
+}
+
+.exteira_mesas a{
+    color: black!important;
+}
+
+.exteira_mesas .text{
+    display: block!important;
+    width: 100%;
+    padding: 2px;
+    margin: 2px auto!important;
+    text-align: center!important;
+}
+
+.exteira_mesas ul li h2,
+.exteira_mesas ul li i{
+    width: 100%;
+    font-size: 10pt;
+    text-align: center!important;
+    font-weight: normal;
+}
+
+.exteira_mesas ul li i{
+    font-size: 12pt!important;
+}
+
+.exteira_mesas ul li span{
+    display: block!important;
+    font-size: 7pt!important;
+}
+
+.status-off{
+    width: 100%;
+    height: auto;
+    padding: 5px!important;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.status-off-1{
+    background: #090;
+    color: white!important;
+}
+
+.status-off-2{
+    background: #ffbf24;
+    color: white!important;
+}
+
+.status-off-3{
+    background: #fd07de;
+}
+
+.status-off-4{
+    background: red;
+    color: white;
+}
+
+.status-off-5{
+    background: #2a91da;
+    color: white;
+}
+
+.all{
+    width: 100%!important;
+    font-size: 12pt!important;
+    font-weight: bold!important;
+}
+
+.exteira_presenca{
+    width: 22%!important;
+    height: 100%!important;
+    border-left: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.off{
+    width: 100%;
+}
+
+.off h4{
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 16px!important;
+    margin-bottom: 10px;
+}
+
+.exteira_presenca ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.exteira_presenca li{
+    width: 100%;
+    text-align: center!important;
+    display: block;
+}
+
+.exteira_presenca .retangulo{
+    width: 40px!important;
+    height: 40px!important;
+    padding: 10px;
+    box-shadow: 0 0 2px rgba(203, 203, 203, 0.23);
+    margin: 5px auto!important;
+    border-radius: 50%!important;
+}
+
+.exteira_presenca span,
+.exteira_presenca label{
+    display: block;
+    font-size: 9pt!important;
+}
+
+@media only screen and (max-width: 320px){
+    .exteira{
+        flex-direction: column!important;
+    }
+
+    .exteira_presenca{
+        width: 100%!important;
+    }
+
+    .exteira_mesas{
+        width: 100%!important;
+    }
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute!important;
+    background: rgba(47, 47, 47, 0.89);
+    z-index: 998;
+}
+
+.strong{
+    height: 36px!important;
+    font-weight: bold;
+    font-size: 14pt!important;
+}
+
+.believer,
+.my-modal{
+    z-index: 999;
+    position: absolute;
+    width:  700px;
+    padding: 10px;
+    top:  10%;
+    left: 20%;
+    margin-top:  20px!important;
+    margin-left: 40px!important;
+    background: white;
+    box-shadow: 0 0 2px rgba(243, 243, 243, 0.72);
+    border-radius: 4px!important;
+}
+
+.header_my_modal{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header_my_modal a{
+    font-size: 14pt!important;
+}
+
+.believer,
+.background,
+.my-modal{
+    display: none;
+}
+
+#assim,
+.porq_assim,
+.two2option{
+    display: flex;
+    justify-content: space-between;
+}
+
+#assim,
+.two2option{
+    flex-direction: column;
+}
+
+#assim{
+    padding: 10px!important;
+}
+
+#assim h2{
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.porq_assim{
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.two2option label{
+    font-size: 9pt!important;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+.form-jah{
+    width: 100%!important;
+    height: 28px;
+    padding: 4px 6px;
+    text-align: left!important;
+}
+
+.tdn{
+    text-align: center!important;
+    padding: 5px;
+    height: 26px;
+}
+
+.form-jah,
+.tdn{
+    outline: none;
+    border: 1px solid rgba(193, 193, 193, 0.55);
+}
+
+.line{
+    width: 100%!important;
+    padding: 2px;
+    margin: 2px auto;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.55);
+}
+
+.lifeIs{
+    margin: 20px auto!important;
+    height: 500px!important;
+    width: 80%!important;
+    /*box-shadow: 0 0 2px rgba(0,0,0,0.56);*/
+}
+
+.mesa_product,
+.MyLife{
+    height: 100%;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.56);
+    flex-direction: column!important;
+    justify-content: space-between!important;
+}
+
+.MyLife{
+    width: 29%;
+    margin-right: 1%;
+    justify-content: flex-start!important;
+}
+
+.MyLife h2{
+    width: 100%;
+    margin: 7px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16pt;
+}
+
+.MyGod{
+    width: 100%;
+    height: 80%!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#maquilhagem{
+    width: 100%;
+    height: 70%;
+    overflow-y: auto;
+}
+
+#Info{
+    width: 100%!important;
+}
+
+.n2options{
+    width: 100%!important;
+    flex-direction: row;
+    margin: 1px auto;
+}
+
+.n2options select{
+    width: 48%;
+}
+
+.mesa_product{
+    width: 80%!important;
+}
+
+.mesa_product .form-jah{
+    width: 100%!important;
+}
+
+.summary{
+    width: 100%!important;
+    height: 90%!important;
+    overflow-y: auto!important;
+}
+
+.summary ul{
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.summary ul li{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin: 10px 4px;
+    border: 5px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-position: 100% 100%;
+    background-size: 80px 80px;
+    box-shadow: 1px 1px 3px rgba(108, 108, 108, 0.41);
+    transition: .4s ease-in;
+    cursor: pointer;
+    position: relative!important;
+}
+
+.summary ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+.summary ul li .wy,
+.summary ul li .my{
+    position: absolute!important;
+    background: rgba(14, 79, 109, 0.32);
+    border-radius: 2px;
+    color: white!important;
+    font-size: 7pt!important;
+    padding: 2px 4px;
+    transition: .2s ease-in;
+}
+
+.summary ul li .wy{
+    width: 100%;
+    float: left!important;
+    left: 0;
+    top: 75%;
+}
+
+.summary ul li .my{
+    float: right!important;
+    right: 0!important;
+}
+
+.summary ul li:hover .my,
+.summary ul li:hover .wy{
+    background: rgba(14, 79, 109, 0.78);
+}
+
+/*** Tabela ***/
+table{
+    width: 100%;
+    margin: 2px auto!important;
+    font-size: 9pt;
+    overflow-x: hidden;
+
+}
+
+table th,
+table thead{
+    text-align: left!important;
+}
+
+table th{
+    padding: 2px 0;
+}
+
+table tbody{
+    font-size: 8pt!important;
+}
+
+table thead,
+table thead tr,
+table thead tr th{
+    text-align: center!important;
+    background: rgba(132, 212, 131, 0.42);
+}
+
+.Tomas,
+.Tattoo,
+.Momment,
+.Array,
+.AllMy,
+.CallYou{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Momment{
+    width: 100%;
+    font-size: 8pt;
+    font-weight: bold;
+    flex-direction: column!important;
+    box-shadow: 0 0 2px rgba(187, 185, 202, 0.33);
+}
+
+.Tomas,
+.AllMy{
+    width: 49%;
+}
+
+.Array,
+.CallYou{
+    padding: 4px 6px;
+    margin-bottom: 2px;
+}
+
+.Array{
+    background: rgba(101, 211, 215, 0.22);
+    color: #5e5e5e;
+}
+
+.CallYou{
+    background: rgba(0, 181, 0, 0.27);
+    color: #3b3b3b;
+}
+
+.Tattoo{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px auto;
+}
+.Tomas{
+    width: 48%!important;
+    flex-direction: column!important;
+}
+
+
+.magic{
+    visibility: hidden;
+}
+
+.Helios{
+    width: 31%!important;
+    flex-direction: column!important;
+}
+
+.btns{
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid rgba(193, 193, 193, 0.55);
+    margin-bottom: 3px;
+    padding: 4px 6px;
+    font-size: 8pt!important;
+    text-align: center!important;
+}
+
+
+
+
+
+
+
+/** MENU POS **/
+#menu-pos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background: white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.656);
+    padding: 2px 10px;
+    z-index: 999!important;
+}
+
+.logotype{
+    width: 180px;
+    height: 80px;
+    /*transition: .6s ease-in;
+    filter: grayScale(100%);*/
+    z-index: 999!important;
+}
+
+/*.logotype:hover{
+    filter: grayScale(0%);
+    z-index: 999!important;
+}*/
+
+.nav-menu li,
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 997!important;
+}
+
+.nav-menu i{
+    color: black!important;
+    font-size: 12pt!important;
+    margin-right: 7px!important;
+    z-index: 997!important;
+}
+
+.nav-menu li.Jah{
+    position: relative;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-left: 1px solid rgba(236, 236, 236, 0.79);
+    transition: .4s all ease-in;
+    z-index: 997!important;
+}
+
+.nav-menu li{
+    margin-right: 10px;
+    z-index: 997!important;
+}
+
+.icon-users{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px!important;
+}
+
+.menu-drop-down{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 5%!important;
+    margin-top: 45px!important;
+    background: white;
+    box-shadow: 0 0 4px rgba(182, 182, 182, 0.44);
+    border-radius: 4px;
+    padding: 4px 6px;
+    transition: .4s all ease-in;
+    z-index: 999;
+}
+
+.menu-drop-down li{
+    padding: 4px 10px;
+}
+
+.menu-drop-down li.asa,
+.menu-drop-down li:nth-last-of-type(2){
+    border-bottom: 1px solid rgba(168, 168, 168, 0.59);
+}
+
+.menu-drop-down li:nth-last-of-type(2) {
+    margin-bottom: 4px;
+}
+
+.nav-menu li.Jah:hover .menu-drop-down{
+    display: block;
+}
+
+.spam{
+    padding: 5px 15px!important;
+}
+
+.spam h6,
+.spam span{
+    text-align: left;
+    font-weight: 600;
+    font-size: 11pt;
+    color: rgba(34, 34, 34, 0.76);
+}
+
+.spam span{
+    font-size: 9pt;
+    color: rgba(68, 68, 68, 0.61);
+    font-weight: normal;
+}

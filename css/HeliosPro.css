@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif!important;
+}
+
+.newA4{
+    height: 1045px!important;
+    max-height: 1045px!important;
+    max-width: 100%!important;
+}
+
+.newA4,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label{
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif!important;
+    font-size: 9pt!important;
+}
+
+.footer-right,
+.Uno,
+.FooterBanca,
+.footer-left,
+.Yolanda,
+.A4-left,
+.A4-right,
+.A4-getMe,
+.newA4reader,
+.MAT{
+    display: flex;
+    justify-content: space-between;
+}
+
+.newA4reader,
+.MAT{
+    width: 100%!important;
+    height: 280px!important;
+    max-height: 280px!important;
+}
+
+.MATs{
+    width: 100%!important;
+    height: auto!important;
+    max-height: auto!important;
+}
+
+.newA4reader,
+.MAT{
+    flex-direction: column;
+}
+
+.MAT{
+    margin: 5px 0!important;
+}
+
+.A4-getMe{
+    flex-direction: row;
+}
+
+.A4-left{
+    justify-content: flex-start!important;
+    flex-direction: column!important;
+    width: 50%!important;
+}
+
+.A4-left span{
+    font-weight: bold!important;
+}
+
+.A4-right{
+    flex-direction: column;
+    margin-left: 15%!important;
+    width: 30%!important;
+    align-content: flex-start!important;
+    justify-content: flex-start!important;
+    align-items: flex-start!important;
+}
+
+.A4-right span{
+    /**margin-left: 15px!important;**/
+}
+
+.Yolanda{
+    width: 100%;
+    margin: 2px auto!important;
+    border-bottom: 1px solid #000000;
+    padding: 5px 0!important;
+}
+
+table.DomingosTomas{
+    width: 100%;
+    padding: 0;
+    margin: 6px 0!important;
+}
+
+table tr th{
+    margin: 0 5%!important;
+    text-align: left!important;
+    border-bottom: 1px solid black!important;
+}
+
+table tr th{
+    text-transform: capitalize!important;
+    padding: 0!important;
+}
+
+table,
+thead,
+tbody,
+tfoot{
+    width: 100%!important;
+}
+
+table{
+    text-transform: capitalize!important;
+    font-size: 9pt!important;
+}
+
+.newA4-body{
+    width: 100%!important;
+    height: 526px!important;
+    max-height: 526px!important;
+    border-bottom: 1px solid black!important;
+}
+
+.Ack{
+    width: 100%!important;
+    border-bottom: 1px solid black!important;
+}
+
+.footer-left{
+    justify-content: flex-start!important;
+    flex-direction: column;
+    width: 50%!important;
+}
+
+.FooterBanca{
+    width: 100%!important;
+    flex-direction: column;
+}
+
+.titleOne{
+    text-transform: capitalize!important;
+    font-weight: bold!important;
+}
+
+.Uno{
+    flex-direction: row!important;
+}
+
+.ap{
+    border-top: 1px solid black!important;
+    padding-top: 2px!important;
+}
+
+.af{
+    border-bottom: 1px solid black!important;
+    padding-bottom: 2px!important;
+}
+
+.footer-right{
+    width: 40%!important;
+    justify-content: flex-start!important;
+    flex-direction: column!important;
+}
+
+table.spec tr td:nth-child(2){
+    font-size: 11pt!important;
+}
+
+table.spec tr.total{
+    border-top: 1px solid black!important;
+}
+
+table.spec tr.total td{
+    font-weight: normal!important;
+    font-size: 11pt!important;
+}
+
+table.spec tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table.spec tr td:nth-child(1){
+    font-weight: bold!important;
+}
+
+p.jud{
+    font-size: 10pt!important;
+}
+
+p.canastra{
+    font-size: 8pt!important;
+}
+
+.newA4-footer{
+}
+
+.Ack-2{
+    margin-bottom: 10px!important;
+}
+
+
+.porn{
+    width: 100%!important;
+    text-align: center!important;
+}
+
+.GotMe{
+    width: auto;
+    margin: 75px auto!important;
+    padding-left: 45px!important;
+}
+
+.GangstaLuv{
+    width: auto;
+    margin: 20px auto!important;
+    padding-left: 15px!important;
+}
+
+.smile{
+    margin-left: 62px!important;
+    margin-top: 10px!important;
+}
+
+.smiles{
+    margin-left: 0px!important;
+    margin-top: 7px!important;
+    font-size: 10pt!important;
+    text-align: justify!important;
+}
+
+.img_ternaria{
+    max-width: 80px!important;
+    max-height: 80px!important;
+}

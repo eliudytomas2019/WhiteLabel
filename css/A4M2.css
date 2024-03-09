@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+.A4,
+.A4-reader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.A4{
+    max-height: 1045px!important;
+    max-width: 100%!important;
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif!important;
+}
+
+.A4 p{
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif!important;
+}
+
+.A4-reader{
+    width: 100%;
+    height: auto;
+    max-height: 380px!important;
+}
+
+.A4-invoice{
+    width: 60%!important;
+    margin-right: 5%!important;
+}
+
+.A4-customer{
+    width: 35%!important;
+}
+
+.A4-reader-two{
+    width: 100%!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.A4-reader span,
+.A4-reader p{
+    font-size: 10pt!important;
+    font-weight: normal;
+    margin: 3px 0;
+}
+
+.A4-reader span{
+    font-weight: bold!important;
+}
+
+#xuxu h1,
+.A4-reader h2{
+    font-weight: 600;
+    font-size: 10pt!important;
+}
+
+.A4-reader h4{
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.heliospro{
+    width: 100%!important;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#xuxu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px!important;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 5px!important;
+}
+
+.umpixel{
+    margin-left: 10px!important;
+}
+
+.porn,
+.jud{
+    font-size: 9pt!important;
+    margin: 0!important;
+}
+
+.a4-body{
+    width: 100%!important;
+    height: 510px!important;
+    max-height: 510px!important;
+    border-bottom: 1px solid black;
+}
+
+.a4-footer{
+    width: 100%!important;
+    height: 175px!important;
+    max-height: 175px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.xuxu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1px 0!important;
+    padding: 0!important;
+}
+
+.banca{
+    width: 100%!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.grouwn{
+    font-size: 9pt!important;
+    margin: 0!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.grouwn span{
+    font-weight: bold!important;
+}
+
+.dope-muzik{
+    font-weight: bold;
+    font-size: 9pt;
+    margin-bottom: 0!important;
+}
+
+.factura-footer-left{
+    width: 50%!important;
+    margin-left: 2%!important;
+}
+
+.factura-footer-right{
+    width: 40%!important;
+}
+
+.fac-footer{
+    width: 100%!important;
+}
+
+.fac-footer p{
+    font-size: 9pt!important;
+}
+
+/*** NEW TABLE ***/
+
+#tabelaspec{
+    width: 100%!important;
+    border: 1px solid #606060!important;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 1px 5px!important;
+}
+
+#tabelaspec td.ce{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right!important;
+    text-transform: uppercase!important;
+}
+
+#tabelaspec caption{
+    color: #888888;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+#tabelaspec td.cd{
+    background-color: #cecece;
+    font-weight: bold;
+}
+
+/** Tabela **/
+table{
+    position: inherit;
+    width: 100%;
+    height: auto;
+    font-size: 9pt!important;
+    margin-bottom: 5px!important;
+}
+
+tr{
+    text-align: left!important;
+}
+
+table thead tr td,
+table thead tr,
+table thead{
+    /*background: rgba(233, 230, 230, 0.16);*/
+}
+
+table tbody{
+    max-width: 100%!important;
+    overflow-y: auto!important;
+}
+
+table tbody tr td,
+table thead tr th{
+    text-align: left!important;
+}
+
+
+table thead tr th{
+    text-transform: uppercase!important;
+    padding: 3px!important;
+}
+
+.A4 table tbody tr td,
+.A4 table thead tr th{
+    text-align: left!important;
+}
+
+.A4 table thead tr th{
+    padding: 3px!important;
+}
+
+.A4 table tbody tr td{
+    padding: 2px 0!important;
+}
+
+table thead{
+    border-bottom: 1px solid #eee!important;
+}
+
+table th{
+    align-items: flex-start;
+    text-align: left;
+}
