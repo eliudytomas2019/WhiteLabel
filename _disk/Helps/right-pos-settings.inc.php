@@ -167,7 +167,7 @@ endif;
         </div>
     </div>
     <div class="col-lg-12">
-        <div class="mb-3">
+        <div class="mb-3" hidden="hidden">
             <label class="form-label">Desconto Financeiro</label>
             <input type="number" min="0" max="100" <?php if($level < 3): ?>disabled<?php endif; ?> id="settings_desc_financ" value="<?php if(isset($DataSupplier['settings_desc_financ'])): echo $DataSupplier['settings_desc_financ']; else: echo "0"; endif; ?>" placeholder="0" class="form-control">
         </div>

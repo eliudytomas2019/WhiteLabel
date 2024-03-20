@@ -7,13 +7,11 @@
     <list default="true" id="36fdf43c-8649-49a2-bd44-98a7f130079e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KwanzarApp/SystemApp/POS.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/KwanzarApp/SystemApp/POS.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProSmart.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_app/Config/DBKwanzar.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/DBKwanzar.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_app/Config/POS.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/POS.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_app/Config/Saft.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Config/Saft.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_disk/System/POS/editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/System/POS/editar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_disk/js/WhiteLabel.v.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/js/WhiteLabel.v.2.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_app/Conn/Check.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/_app/Conn/Check.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_disk/Helps/right-pos-settings.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/Helps/right-pos-settings.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_disk/Helps/table-documents-settings.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/Helps/table-documents-settings.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_disk/Helps/table-documents-settingsProformas.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/_disk/Helps/table-documents-settingsProformas.inc.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +143,10 @@
       <workItem from="1709589156560" duration="1890000" />
       <workItem from="1709854499024" duration="6836000" />
       <workItem from="1709937639085" duration="38000" />
+      <workItem from="1709943475551" duration="2947000" />
+      <workItem from="1710018151131" duration="1687000" />
+      <workItem from="1710368463837" duration="7954000" />
+      <workItem from="1710581938878" duration="496000" />
     </task>
     <servers />
   </component>

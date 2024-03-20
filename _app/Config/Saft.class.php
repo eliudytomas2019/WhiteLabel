@@ -42,6 +42,12 @@ class Saft{
         $this->Xml  = "<?xml version='1.0' encoding='UTF-8' ?>";
         $this->Xml .= '<AuditFile>';
             // 1. Header
+
+            if(empty($this->Dados['city']) || $this->Dados['city'] == " "): $this->Dados['city'] = "Luanda"; endif;
+            if(empty($this->Dados['addressDetail']) || $this->Dados['addressDetail'] = " "): $this->Dados['addressDetail'] = "Luanda - Angola"; endif;
+            if(empty($this->Dados['BuildingNumber']) || $this->Dados['BuildingNumber'] == " "): $this->Dados['BuildingNumber'] = 1; endif;
+
+            if(empty($this->Dados['BuildingNumber'])): $this->Dados['BuildingNumber'] = 12; endif;
             $this->Xml .= '<Header>';
                 $this->Xml .= '<AuditFileVersion>1.00_01</AuditFileVersion>';
                 $this->Xml .= '<CompanyID>'.$this->Dados['id'].'</CompanyID>';
@@ -50,10 +56,10 @@ class Saft{
                 $this->Xml .= '<CompanyName>'.$this->Dados['empresa'].'</CompanyName>';
                 $this->Xml .= '<BusinessName>'.$this->Dados['businessName'].'</BusinessName>';
                 $this->Xml .= '<CompanyAddress>';
-                    $this->Xml .= '<BuildingNumber>'.$this->Dados['BuildingNumber'].'</BuildingNumber>';
+                    $this->Xml .= '<BuildingNumber>'.Check::Words($this->Dados['BuildingNumber'], 11).'</BuildingNumber>';
                     $this->Xml .= '<StreetName>'.$this->Dados['endereco'].'</StreetName>';
                     $this->Xml .= '<AddressDetail>'.$this->Dados['addressDetail'].'</AddressDetail>';
-                    $this->Xml .= '<City>'.$this->Dados['city'].'</City>';
+                    $this->Xml .= '<City>'.Check::Words($this->Dados['city'], 25).'</City>';
                     $this->Xml .= '<Country>AO</Country>';
                 $this->Xml .= '</CompanyAddress>';
                 $this->Xml .= '<FiscalYear>'.$this->dateI[0].'</FiscalYear>';
@@ -66,7 +72,7 @@ class Saft{
 
                 $this->Xml .= '<ProductCompanyTaxID>5000161012</ProductCompanyTaxID>';
                 $this->Xml .= '<SoftwareValidationNumber>244/AGT/2019</SoftwareValidationNumber>';
-                $this->Xml .= '<ProductID>Kwanzar - Softwares de gestāo/HELIOS PRO PRESTACAO DE SERVICOS (SU), LDA.</ProductID>';
+                $this->Xml .= '<ProductID>Kwanzar - Software de gestão comercial/HELIOS PRO PRESTACAO DE SERVICOS (SU), LDA.</ProductID>';
                 $this->Xml .= '<ProductVersion>1.1</ProductVersion>';
                 $this->Xml .= '<Telephone>949482020</Telephone>';
                 $this->Xml .= '<Email>teliudy28@gmail.com</Email>';
@@ -78,7 +84,10 @@ class Saft{
                 $Read->ExeRead(self::customer, "WHERE id_db_settings=:i", "i={$this->ID}");
                 if($Read->getResult()):
                     foreach ($Read->getResult() as $key):
-                        extract($key);
+                        //extract($key);
+
+                        if(empty($key['addressDetail']) || $key['addressDetail'] == " "): $key['addressDetail'] = "Luanda - Angola"; endif;
+
                         $this->Xml .= '<Customer>';
                             $this->Xml .= '<CustomerID>'.$key['id'].'</CustomerID>';
                             $this->Xml .= '<AccountID>'.$key['id'].'</AccountID>';
@@ -98,7 +107,7 @@ class Saft{
                 $Read->ExeRead(self::product, "WHERE id_db_settings=:i", "i={$this->ID}");
                 if($Read->getResult()):
                     foreach ($Read->getResult() as $key):
-                        extract($key);
+                        //extract($key);
                         $this->Xml .= '<Product>';
                             $this->Xml .= '<ProductType>'.$key['type'].'</ProductType>';
                             $this->Xml .= '<ProductCode>'.$key['id'].'</ProductCode>';
@@ -152,18 +161,26 @@ class Saft{
                     endif;
 
                     // REGRAR DOCUMENTO QUE SERÁ USADO NA FACTURA
-                    $read->ExeRead("{$n1}", "WHERE ({$n1}.id_db_settings=:i) AND ({$n1}.dia BETWEEN {$this->dateI[2]} AND {$this->dateF[2]}) AND ({$n1}.mes BETWEEN {$this->dateI[1]} AND {$this->dateF[1]}) AND ({$n1}.ano BETWEEN {$this->dateI[0]} AND {$this->dateF[0]}) AND ({$n1}.InvoiceType!='PP') AND ({$n1}.status=:ss) AND ({$n1}.suspenso=:Vp)", "i={$this->ID}&ss={$sL}&Vp={$Vp}");
+                    $read->ExeRead("{$n1}", "WHERE ({$n1}.id_db_settings=:i) AND ({$n1}.dia BETWEEN {$this->dateI[2]} AND {$this->dateF[2]}) AND ({$n1}.mes BETWEEN {$this->dateI[1]} AND {$this->dateF[1]}) AND ({$n1}.ano BETWEEN {$this->dateI[0]} AND {$this->dateF[0]}) AND ({$n1}.InvoiceType!='PP') AND ({$n1}.status=:ss) AND ({$n1}.suspenso=:Vp) ORDER BY {$n1}.TaxPointDate ASC", "i={$this->ID}&ss={$sL}&Vp={$Vp}");
                     $Docs = $read->getResult();
 
                     // CONTAR OS PRODUTOS PARA GERAR IMPOSTOS
-                    $read->ExeRead("{$n1}, {$n2}", "WHERE ({$n1}.id_db_settings=:i) AND ({$n1}.dia BETWEEN {$this->dateI[2]} AND {$this->dateF[2]}) AND ({$n1}.mes BETWEEN {$this->dateI[1]} AND {$this->dateF[1]}) AND ({$n1}.ano BETWEEN {$this->dateI[0]} AND {$this->dateF[0]}) AND ({$n1}.InvoiceType!='PP') AND {$n2}.InvoiceType={$n1}.InvoiceType AND ({$n1}.status=:ss) AND ({$n1}.suspenso=:Vp) AND  ({$n2}.id_db_settings=:i) AND ({$n2}.numero={$n1}.numero) AND ({$n2}.status=:ss)", "i={$this->ID}&ss={$sL}&Vp={$Vp}");
+                    $read->ExeRead("{$n1}, {$n2}", "WHERE ({$n1}.id_db_settings=:i) AND ({$n1}.dia BETWEEN {$this->dateI[2]} AND {$this->dateF[2]}) AND ({$n1}.mes BETWEEN {$this->dateI[1]} AND {$this->dateF[1]}) AND ({$n1}.ano BETWEEN {$this->dateI[0]} AND {$this->dateF[0]}) AND ({$n1}.InvoiceType!='PP') AND {$n2}.InvoiceType={$n1}.InvoiceType AND ({$n1}.status=:ss) AND ({$n1}.suspenso=:Vp) AND  ({$n2}.id_db_settings=:i) AND ({$n2}.numero={$n1}.numero) AND ({$n2}.status=:ss) ORDER BY {$n1}.TaxPointDate ASC ", "i={$this->ID}&ss={$sL}&Vp={$Vp}");
+
+                    $xXx = null;
+
                     if($read->getResult()):
                         foreach($read->getResult() as $key):
                             extract($key);
                             $value = ($key['quantidade_pmp'] * $key['preco_pmp']);
-                            $desconto = ($value * $key['desconto_pmp']) / 100;
+                            if($key['desconto_pmp'] >= 100):
+                                $desconto = $key['desconto_pmp'];
+                            else:
+                                $desconto = ($value * $key['desconto_pmp']) / 100;
+                            endif;
+                            //$desconto = ($value * $key['desconto_pmp']) / 100;
                             $imposto  = ($value * $key['taxa']) / 100;
-                            $Tdoc1 += $value;
+                            $Tdoc1 += ($value);
                         endforeach;
                     endif;
 
@@ -175,12 +192,13 @@ class Saft{
 
                     if($Docs):
                         foreach ($Docs as $key):
+                            $xXx += 1;
                             //extract($key);
 
                             //$a = str_split($key['hash']);
                             $this->Xml .= '<Invoice>';
                             $line += 1;
-                            $this->Xml .= '<InvoiceNo>'.$key['InvoiceType']." ".$key['mes'].$key['Code'].$key['ano']."/".$key['numero'].'</InvoiceNo>';
+                            $this->Xml .= '<InvoiceNo>'.$key['InvoiceType']." ".$key['mes'].$key['Code'].$key['ano']."/".$xXx.'</InvoiceNo>';
                             $this->Xml .= '<DocumentStatus>';
                                 $this->Xml .= '<InvoiceStatus>N</InvoiceStatus>';
                                 $this->Xml .= '<InvoiceStatusDate>'.$key['ano'].'-'.$key['mes'].'-'.$key['dia'].'T'.$key['hora'].'</InvoiceStatusDate>';
@@ -191,7 +209,7 @@ class Saft{
                             //$a = str_split($key['hash']);
 
                             //$this->Xml .= '<Hash>'.$a[0].$a[11].$a[21].$a[31].'</Hash>';
-                            $this->Xml .= '<Hash>'.$key['hash'].'</Hash>';
+                            $this->Xml .= '<Hash>'.htmlspecialchars(strip_tags(trim($key['hash'], "\n"))).'</Hash>';
                             $this->Xml .= '<HashControl>0</HashControl>';
                             $this->Xml .= '<InvoiceDate>'.$key['ano'].'-'.$key['mes'].'-'.$key['dia'].'</InvoiceDate>';
                             $this->Xml .= '<InvoiceType>'.$key['InvoiceType'].'</InvoiceType>';
@@ -224,7 +242,13 @@ class Saft{
                                     $nLine += 1;
                                     $valor = $ke['quantidade_pmp'] * $ke['preco_pmp'];
                                     $iva = ($valor * $ke['taxa']) / 100;
-                                    $desconto = ($valor * $ke['desconto_pmp']) / 100;
+                                    //$desconto = ($valor * $ke['desconto_pmp']) / 100;
+                                    if($ke['desconto_pmp'] >= 100):
+                                        $desconto = $ke['desconto_pmp'];
+                                    else:
+                                        $desconto = ($value * $ke['desconto_pmp']) / 100;
+                                    endif;
+                                    //$desconto_f = ($valor * $ke['settings_desc_financ']) / 100;
                                     $total = ($valor - $desconto) + $iva;
                                     $iV += $iva;
 
@@ -266,9 +290,9 @@ class Saft{
                                 endforeach;
                             endif;
                             $this->Xml .= '<DocumentTotals>';
-                            $this->Xml .= '<TaxPayable>'.$iV.'</TaxPayable>';
-                            $this->Xml .= '<NetTotal>'.$tt.'</NetTotal>';
-                            $this->Xml .= '<GrossTotal>'.$total_preco.'</GrossTotal>';
+                                $this->Xml .= '<TaxPayable>'.$iV.'</TaxPayable>';
+                                $this->Xml .= '<NetTotal>'.($tt).'</NetTotal>';
+                                $this->Xml .= '<GrossTotal>'.($total_preco).'</GrossTotal>';
                             $this->Xml .= '</DocumentTotals>';
                             $this->Xml .= '</Invoice>';
                         endforeach;
@@ -277,6 +301,7 @@ class Saft{
                 $this->Xml .='</SalesInvoices>';
             $this->Xml .='</SourceDocuments>';
         $this->Xml .= "</AuditFile>";
+
 
         header("Content-Description: PHP Generated Data");
         header("Content-Type: application/xml");

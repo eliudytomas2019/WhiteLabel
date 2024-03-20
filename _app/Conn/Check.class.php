@@ -13,8 +13,8 @@ class Check{
         //$CleanPro = preg_replace('/[^a-zA-Z0-9áéíóúÁÉÍÓÚàèìòùÀÈÌÒÙãõÃÕâêîôûÂÊÎÔÛçÇ ]/', '', $name);
         self::$Format = array();
 
-        self::$Format['a'] = '"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
-        self::$Format['b'] = '                                 ';
+        self::$Format['a'] = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿRr"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
+        self::$Format['b'] = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                                 ';
 
         self::$Data = strtr($name, self::$Format['a'], self::$Format['b']);
         return self::$Data;

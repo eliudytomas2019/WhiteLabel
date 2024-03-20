@@ -38,7 +38,7 @@
     endif;
 
     $read = new Read();
-    $read->ExeRead("{$n1}", "WHERE ({$n1}.id_db_settings=:i AND {$n1}.InvoiceType='{$PPs}' {$CristoHeader} AND {$n1}.status=:st AND {$n1}.suspenso={$s}) ORDER BY {$n1}.id DESC LIMIT 20", "i={$id_db_settings}{$CristoBody}&st={$st}");
+    $read->ExeRead("{$n1}", "WHERE ({$n1}.id_db_settings=:i AND {$n1}.InvoiceType='{$PPs}' {$CristoHeader} AND {$n1}.status=:st AND {$n1}.suspenso={$s}) ORDER BY {$n1}.TaxPointDate DESC LIMIT 20", "i={$id_db_settings}{$CristoBody}&st={$st}");
     if($read->getResult()):
         foreach ($read->getResult() as $key):
             require("_disk/AppData/ResultDocumentsProformas.inc.php");
