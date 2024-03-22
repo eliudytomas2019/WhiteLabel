@@ -40,7 +40,7 @@ class Saft{
         $time = time();
         $this->File = "SAF-T_".time().".xml";
         $this->Xml  = "<?xml version='1.0' encoding='UTF-8' ?>";
-        $this->Xml .= '<AuditFile>';
+        $this->Xml .= "<AuditFile xmlns='urn:OECD:StandardAuditFile-Tax:AO_1.01_01' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>";
             // 1. Header
 
             if(empty($this->Dados['city']) || $this->Dados['city'] == " "): $this->Dados['city'] = "Luanda"; endif;
@@ -49,17 +49,17 @@ class Saft{
 
             if(empty($this->Dados['BuildingNumber'])): $this->Dados['BuildingNumber'] = 12; endif;
             $this->Xml .= '<Header>';
-                $this->Xml .= '<AuditFileVersion>1.00_01</AuditFileVersion>';
-                $this->Xml .= '<CompanyID>'.$this->Dados['id'].'</CompanyID>';
+                $this->Xml .= '<AuditFileVersion>1.01_01</AuditFileVersion>';
+                $this->Xml .= '<CompanyID>'.$this->Dados['nif'].'</CompanyID>';
                 $this->Xml .= '<TaxRegistrationNumber>'.$this->Dados['nif'].'</TaxRegistrationNumber>';
                 $this->Xml .= '<TaxAccountingBasis>F</TaxAccountingBasis>';
-                $this->Xml .= '<CompanyName>'.$this->Dados['empresa'].'</CompanyName>';
-                $this->Xml .= '<BusinessName>'.$this->Dados['businessName'].'</BusinessName>';
+                $this->Xml .= '<CompanyName>'.utf8_decode($this->Dados['empresa']).'</CompanyName>';
+                $this->Xml .= '<BusinessName>'.utf8_decode($this->Dados['empresa']).'</BusinessName>';
                 $this->Xml .= '<CompanyAddress>';
-                    $this->Xml .= '<BuildingNumber>'.Check::Words($this->Dados['BuildingNumber'], 11).'</BuildingNumber>';
-                    $this->Xml .= '<StreetName>'.$this->Dados['endereco'].'</StreetName>';
-                    $this->Xml .= '<AddressDetail>'.$this->Dados['addressDetail'].'</AddressDetail>';
-                    $this->Xml .= '<City>'.Check::Words($this->Dados['city'], 25).'</City>';
+                    $this->Xml .= '<BuildingNumber>'.Check::Words($this->Dados['BuildingNumber'], 5).'</BuildingNumber>';
+                    $this->Xml .= '<StreetName>'.utf8_decode($this->Dados['endereco']).'</StreetName>';
+                    $this->Xml .= '<AddressDetail>'.utf8_decode($this->Dados['addressDetail']).'</AddressDetail>';
+                    $this->Xml .= '<City>'.utf8_decode($this->Dados['city']).'</City>';
                     $this->Xml .= '<Country>AO</Country>';
                 $this->Xml .= '</CompanyAddress>';
                 $this->Xml .= '<FiscalYear>'.$this->dateI[0].'</FiscalYear>';
@@ -68,13 +68,15 @@ class Saft{
                 $this->Xml .= '<CurrencyCode>AOA</CurrencyCode>';
                 $d = $this->dateI[2] - 1;
                 $this->Xml .= '<DateCreated>'.date('Y-m-d').'</DateCreated>';
-                $this->Xml .= '<TaxEntity>'.$this->Dados['taxEntity'].'</TaxEntity>';
+                $this->Xml .= '<TaxEntity>Global</TaxEntity>';
 
                 $this->Xml .= '<ProductCompanyTaxID>5000161012</ProductCompanyTaxID>';
                 $this->Xml .= '<SoftwareValidationNumber>244/AGT/2019</SoftwareValidationNumber>';
-                $this->Xml .= '<ProductID>Kwanzar - Software de gestão comercial/HELIOS PRO PRESTACAO DE SERVICOS (SU), LDA.</ProductID>';
-                $this->Xml .= '<ProductVersion>1.1</ProductVersion>';
+                $this->Xml .= '<ProductID>Kwanzar - Software de gestão comercial/HELIOS PRO PRESTACAO DE SERVICOS (SU), LDA</ProductID>';
+                $this->Xml .= '<ProductVersion>Ver.1.1</ProductVersion>';
+                $this->Xml .= '<HeaderComment>Software de Facturação</HeaderComment>';
                 $this->Xml .= '<Telephone>949482020</Telephone>';
+                $this->Xml .= '<Fax>0</Fax>';
                 $this->Xml .= '<Email>teliudy28@gmail.com</Email>';
             $this->Xml .="</Header>";
 
@@ -92,11 +94,11 @@ class Saft{
                             $this->Xml .= '<CustomerID>'.$key['id'].'</CustomerID>';
                             $this->Xml .= '<AccountID>'.$key['id'].'</AccountID>';
                             $this->Xml .= '<CustomerTaxID>'.$key['nif'].'</CustomerTaxID>';
-                            $this->Xml .= '<CompanyName>'.Check::CheckNamePro($key['nome']).'</CompanyName>';
+                            $this->Xml .= '<CompanyName>'.$key['nome'].'</CompanyName>';
                             $this->Xml .= '<BillingAddress>';
-                                $this->Xml .= '<AddressDetail>'.Check::CheckNamePro($key['addressDetail']).'</AddressDetail>';
-                                $this->Xml .= '<City>'.$key['city'].'</City>';
-                                $this->Xml .= '<Country>'.$key['country'].'</Country>';
+                                $this->Xml .= '<AddressDetail>'.utf8_decode($key['addressDetail']).'</AddressDetail>';
+                                $this->Xml .= '<City>'.utf8_decode($key['city']).'</City>';
+                                $this->Xml .= '<Country>AO</Country>';
                             $this->Xml .= '</BillingAddress>';
                             $this->Xml .= '<SelfBillingIndicator>0</SelfBillingIndicator>';
                         $this->Xml .= '</Customer>';
@@ -110,9 +112,9 @@ class Saft{
                         //extract($key);
                         $this->Xml .= '<Product>';
                             $this->Xml .= '<ProductType>'.$key['type'].'</ProductType>';
-                            $this->Xml .= '<ProductCode>'.$key['id'].'</ProductCode>';
-                            $this->Xml .= '<ProductDescription>'.Check::CheckNamePro($key['product']).'</ProductDescription>';
-                            $this->Xml .= '<ProductNumberCode>'.Check::CheckNamePro($key['codigo']).$key['id'].'</ProductNumberCode>';
+                            $this->Xml .= '<ProductCode>'.$key['codigo'].$key['id'].'</ProductCode>';
+                            $this->Xml .= '<ProductDescription>'.$key['product'].'</ProductDescription>';
+                            $this->Xml .= '<ProductNumberCode>'.$key['codigo'].$key['id'].'</ProductNumberCode>';
                         $this->Xml .= '</Product>';
                     endforeach;
                 endif;
@@ -125,9 +127,9 @@ class Saft{
                             extract($key);
                             $this->Xml .= '<TaxTableEntry>';
                                 $this->Xml .= '<TaxType>'.$key['taxType'].'</TaxType>';
-                                $this->Xml .= '<TaxCountryRegion>'.$key['TaxCountryRegion'].'</TaxCountryRegion>';
+                                //$this->Xml .= '<TaxCountryRegion>'.$key['TaxCountryRegion'].'</TaxCountryRegion>';
                                 $this->Xml .= '<TaxCode>'.$key['taxCode'].'</TaxCode>';
-                                $this->Xml .= '<Description>'.$key['description'].'</Description>';
+                                $this->Xml .= '<Description>'.($key['description']).'</Description>';
                                 $this->Xml .= '<TaxPercentage>'.$key['taxPercentage'].'</TaxPercentage>';
                             $this->Xml .= '</TaxTableEntry>';
                         endforeach;
@@ -210,19 +212,42 @@ class Saft{
 
                             //$this->Xml .= '<Hash>'.$a[0].$a[11].$a[21].$a[31].'</Hash>';
                             $this->Xml .= '<Hash>'.htmlspecialchars(strip_tags(trim($key['hash'], "\n"))).'</Hash>';
-                            $this->Xml .= '<HashControl>0</HashControl>';
+                            $this->Xml .= '<HashControl>1</HashControl>';
+                            $this->Xml .= '<Period>02</Period>';
                             $this->Xml .= '<InvoiceDate>'.$key['ano'].'-'.$key['mes'].'-'.$key['dia'].'</InvoiceDate>';
                             $this->Xml .= '<InvoiceType>'.$key['InvoiceType'].'</InvoiceType>';
 
                             $this->Xml .= '<SpecialRegimes>';
-                                $this->Xml .= '<SelfBillingIndicator>1</SelfBillingIndicator>';
-                                $this->Xml .= '<CashVATSchemeIndicator>1</CashVATSchemeIndicator>';
+                                $this->Xml .= '<SelfBillingIndicator>0</SelfBillingIndicator>';
+                                $this->Xml .= '<CashVATSchemeIndicator>0</CashVATSchemeIndicator>';
                                 $this->Xml .= '<ThirdPartiesBillingIndicator>0</ThirdPartiesBillingIndicator>';
                             $this->Xml .= '</SpecialRegimes>';
 
                             $this->Xml .= '<SourceID>'.$key['session_id'].'</SourceID>';
                             $this->Xml .= '<SystemEntryDate>'.$key['ano'].'-'.$key['mes'].'-'.$key['dia'].'T'.$key['hora'].'</SystemEntryDate>';
                             $this->Xml .= '<CustomerID>'.$key['id_customer'].'</CustomerID>';
+
+                            $this->Xml .= '<ShipTo>';
+                                $this->Xml .= '<Address>';
+                                    $this->Xml .= '<BuildingNumber>'.$key['id_customer'].'</BuildingNumber>';
+                                    $this->Xml .= '<StreetName>'.$key['customer_endereco'].'</StreetName>';
+                                    $this->Xml .= '<AddressDetail>'.$key['customer_endereco'].'</AddressDetail>';
+                                    $this->Xml .= '<City>Luanda</City>';
+                                    $this->Xml .= '<Province>Luanda</Province>';
+                                    $this->Xml .= '<Country>AO</Country>';
+                                $this->Xml .= '</Address>';
+                            $this->Xml .= '</ShipTo>';
+
+                            $this->Xml .= '<ShipFrom>';
+                                $this->Xml .= '<Address>';
+                                    $this->Xml .= '<BuildingNumber>'.$key['id_customer'].'</BuildingNumber>';
+                                    $this->Xml .= '<StreetName>'.$key['customer_endereco'].'</StreetName>';
+                                    $this->Xml .= '<AddressDetail>'.$key['customer_endereco'].'</AddressDetail>';
+                                    $this->Xml .= '<City>Luanda</City>';
+                                    $this->Xml .= '<Province>Luanda</Province>';
+                                    $this->Xml .= '<Country>AO</Country>';
+                                $this->Xml .= '</Address>';
+                            $this->Xml .= '</ShipFrom>';
 
                             $iV = 0;
                             $total_valor = 0;
@@ -262,17 +287,17 @@ class Saft{
                                     $total_preco += $total;
                                     $this->Xml .= '<Line>';
                                         $this->Xml .= '<LineNumber>'.$nLine.'</LineNumber>';
-                                        $this->Xml .= '<ProductCode>'.$ke['id_product'].'</ProductCode>';
-                                        $this->Xml .= '<ProductDescription>'.Check::CheckNamePro($ke['product_name']).'</ProductDescription>';
+                                        $this->Xml .= '<ProductCode>'.$ke['product_code'].$ke['id_product'].'</ProductCode>';
+                                        $this->Xml .= '<ProductDescription>'.($ke['product_name']).'</ProductDescription>';
                                         $this->Xml .= '<Quantity>'.$ke['quantidade_pmp'].'</Quantity>';
                                         $this->Xml .= '<UnitOfMeasure>'.$ke['product_uni'].'</UnitOfMeasure>';
                                         $this->Xml .= '<UnitPrice>'.$ke['preco_pmp'].'</UnitPrice>';
                                         $this->Xml .= '<TaxPointDate>'.$key['TaxPointDate'].'</TaxPointDate>';
-                                        $this->Xml .= '<Description>'.Check::CheckNamePro($ke['product_name']).'</Description>';
+                                        $this->Xml .= '<Description>'.($ke['product_name']).'</Description>';
                                         $this->Xml .= '<CreditAmount>'.$net.'</CreditAmount>';
                                         $this->Xml .= '<Tax>';
                                             $this->Xml .= '<TaxType>'.$ke['taxType'].'</TaxType>';
-                                            $this->Xml .= '<TaxCountryRegion>'.$ke['TaxCountryRegion'].'</TaxCountryRegion>';
+                                            $this->Xml .= '<TaxCountryRegion>'.($ke['TaxCountryRegion']).'</TaxCountryRegion>';
                                             $this->Xml .= '<TaxCode>'.$ke['taxCode'].'</TaxCode>';
                                             $this->Xml .= '<TaxPercentage>'.$ke['taxa'].'</TaxPercentage>';
                                             if($ke['taxType'] != 'IVA' && $ke['taxType'] == 15):
@@ -280,7 +305,7 @@ class Saft{
                                             endif;
                                         $this->Xml .= '</Tax>';
                                         if($ke['taxa'] == 0 && $ke['taxAmount'] == 0):
-                                            $this->Xml .= '<TaxExemptionReason>'.$ke['TaxExemptionReason'].'</TaxExemptionReason>';
+                                            $this->Xml .= '<TaxExemptionReason>'.($ke['TaxExemptionReason']).'</TaxExemptionReason>';
                                             $this->Xml .= '<TaxExemptionCode>'.$ke['TaxExemptionCode'].'</TaxExemptionCode>';
                                         endif;
                                         /*if($ke['taxa'] == 0):
