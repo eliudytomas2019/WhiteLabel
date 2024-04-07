@@ -132,11 +132,11 @@ if(DBKwanzar::CheckConfig($id_db_settings)['cambio_x_preco'] == 1 && !empty(DBKw
     if(!$Product->getResult()):
         WSError($Product->getError()[0], $Product->getError()[1]);
     endif;
-else:
+/**else:
     $Product = new Product();
     $Product->ExeUpdateCambioII($id_db_settings);
 
     if(!$Product->getResult()):
         WSError($Product->getError()[0], $Product->getError()[1]);
-    endif;
+    endif;**/
 endif;

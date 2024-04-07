@@ -25,13 +25,16 @@ class Product{
 
         if($Read->getResult()):
             foreach ($Read->getResult() as $key):
-                if(empty($key['custo_compra'])):
-                    $this->Data['preco_venda'] = $taxa * 2;
+                $this->Data['preco_venda_ii'] = $key['preco_venda'];
+                $this->Data['peso_bruto'] = $taxa;
+
+                if(empty($key['preco_venda_ii'])):
+                    $this->Data['preco_venda'] = ($key['preco_venda'] + $taxa);
                 else:
-                    $this->Data['preco_venda'] = ($key['custo_compra'] + ($key['custo_compra'] * $key['PorcentagemP']) / 100) + $taxa;
+                    $this->Data['preco_venda'] = ($key['preco_venda_ii'] + $taxa);
                 endif;
 
-                if($key['preco_venda'] != $this->Data['preco_venda']):
+                if($key['peso_bruto'] != $taxa):
                     $this->ID = $key['id'];
                     $this->UpdateCambio();
                 else:
